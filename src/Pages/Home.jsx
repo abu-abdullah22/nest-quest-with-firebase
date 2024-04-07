@@ -1,8 +1,12 @@
+import Banner from "../Components/Banner";
 import Navbar from "../Components/Navbar";
 
 const Home = () => {
     return (
-       <Navbar></Navbar>
+        <div>
+            <Navbar></Navbar>
+            <Banner></Banner>
+        </div>
     );
 };
 
