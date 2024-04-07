@@ -24,10 +24,10 @@ const Banner = () => {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        className="mySwiper rounded-lg lg:h-[90vh]"
       >
         <SwiperSlide>
-          <img className='' src="/banner1.jpg" />
+          <img src="/banner1.jpg" />
         </SwiperSlide>
         <SwiperSlide>
           <img src="/banner3.jpg" />

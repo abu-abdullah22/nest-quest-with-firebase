@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
 
 const Login = () => {
     return (
        <div>
-        <Navbar></Navbar>
+    
          <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
