@@ -1,0 +1,122 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "estate_title": "Cozy Single-Family Home",
+        "segment_name": "Single-family homes",
+        "description": "Nestled in a serene neighborhood, this cozy single-family home exudes warmth and comfort. Boasting three bedrooms and two bathrooms, it offers ample space for a growing family. The spacious yard is perfect for outdoor activities and gardening enthusiasts. With its charming exterior and inviting interior, this home is ideal for creating lasting memories with loved ones. Located at 123 Main St in Anytown, USA, convenience meets tranquility in this idyllic setting. Priced at $300,000, this home offers exceptional value for those seeking a peaceful retreat.",
+        "price": "$300,000",
+        "status": "sale",
+        "area": "1800 sq ft",
+        "location": "123 Main St, Anytown, USA",
+        "facilities": ["3 Bedrooms", "2 Bathrooms", "Spacious Yard"],
+        "image": "https://i.ibb.co/P46frtc/203.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 2,
+        "estate_title": "Modern Apartment with City View",
+        "segment_name": "Apartments",
+        "description": "Experience urban living at its finest in this modern apartment with breathtaking city views. Situated at 456 Downtown Ave in Metropolis, USA, this sleek residence offers the perfect blend of style and convenience. Boasting an open kitchen, balcony, and access to a gym, it provides an unparalleled lifestyle. Ideal for professionals and city dwellers, this apartment offers 1000 sq ft of contemporary living space. With a monthly rent of $2,000, tenants can enjoy the vibrant energy of downtown living without compromise.",
+        "price": "$2,000/month",
+        "status": "rent",
+        "area": "1000 sq ft",
+        "location": "456 Downtown Ave, Metropolis, USA",
+        "facilities": ["Open Kitchen", "Balcony", "Gym Access"],
+        "image": "https://i.ibb.co/mT1Vb7K/2.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 3,
+        "estate_title": "Luxury Townhouse in Gated Community",
+        "segment_name": "Townhouses",
+        "description": "Indulge in luxury living with this exquisite townhouse nestled within a secure gated community. Located at 789 Oak Street in Suburbia, USA, this elegant residence offers discerning buyers the ultimate in comfort and sophistication. Featuring four bedrooms, three and a half bathrooms, and a private garage, it caters to the needs of modern families. With high-end finishes and premium amenities, this townhouse sets the standard for upscale living. Priced at $500,000, this is a rare opportunity to own a piece of luxury in an exclusive neighborhood.",
+        "price": "$500,000",
+        "status": "sale",
+        "area": "2500 sq ft",
+        "location": "789 Oak Street, Suburbia, USA",
+        "facilities": ["4 Bedrooms", "3.5 Bathrooms", "Private Garage"],
+        "image": "https://i.ibb.co/j3dGhJP/3173.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 4,
+        "estate_title": "Seaside Vacation Rental Cottage",
+        "segment_name": "Vacation rentals",
+        "description": "Escape to a charming seaside cottage for the ultimate vacation retreat. Located at 10 Beachfront Rd in a picturesque coastal town, this quaint getaway offers panoramic ocean views and coastal breezes. Whether you're lounging on the beach, enjoying the outdoor patio, or cozying up by the fireplace, this cottage provides the perfect backdrop for relaxation. With two bedrooms and one bathroom, it comfortably accommodates small families or couples seeking a romantic getaway. Priced at $150 per night, this vacation rental promises an unforgettable coastal experience.",
+        "price": "$150/night",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "10 Beachfront Rd, Coastal Town, USA",
+        "facilities": ["Beach Access", "Outdoor Patio", "Fireplace"],
+        "image": "https://i.ibb.co/k574pHb/link-hoang-Uoq-AR2p-Ox-Mo-unsplash.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 5,
+        "estate_title": "Family-Friendly Apartment Complex",
+        "segment_name": "Apartments",
+        "description": "Discover the perfect blend of comfort and convenience in this family-friendly apartment complex. Situated at 789 Maple Avenue in Suburbia, USA, this spacious residence offers a plethora of amenities for families. From the playground and fitness center to the laundry facilities, every need is catered to within the community. With two bedrooms and two bathrooms, this apartment provides ample space for families to thrive. Priced at $1,500 per month, this rental opportunity offers an affordable yet luxurious lifestyle for families seeking suburban living.",
+        "price": "$1,500/month",
+        "status": "rent",
+        "area": "1200 sq ft",
+        "location": "789 Maple Avenue, Suburbia, USA",
+        "facilities": ["Playground", "Fitness Center", "Laundry Facilities"],
+        "image": "https://i.ibb.co/c62j6dR/patrick-perkins-3wyl-Drjx-H-E-unsplash.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 6,
+        "estate_title": "Exclusive Senior Living Community",
+        "segment_name": "Senior living communities",
+        "description": "Experience retirement living at its finest in this exclusive senior living community. Nestled within the serene surroundings of 456 Retirement Lane in Serenity Springs, USA, this vibrant community offers luxurious amenities and a sense of camaraderie for its residents. From the gated entry and community center to the walking trails, every aspect of this community is designed to enhance the retirement experience. With two bedrooms and two bathrooms, this residence provides ample space for relaxation and entertainment. Priced at $400,000, this is an opportunity to enjoy the golden years in style.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "2000 sq ft",
+        "location": "456 Retirement Lane, Serenity Springs, USA",
+        "facilities": ["Gated Entry", "Community Center", "Walking Trails"],
+        "image": "https://i.ibb.co/ZNBZLp4/andre-ouellet-Fz-ECg2e-Nhj4-unsplash.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 7,
+        "estate_title": "Stylish Downtown Loft",
+        "segment_name": "Apartments",
+        "description": "Embrace the urban lifestyle in this stylish downtown loft located at 101 Loft Avenue in Downtown Metropolis, USA. With its industrial-chic design, exposed brick walls, and high ceilings, this loft offers a unique living experience for discerning buyers. Boasting two bedrooms and two bathrooms, it provides ample space for modern living. The rooftop deck offers stunning views of the city skyline, perfect for entertaining guests or relaxing after a long day. Priced at $400,000, this is a rare opportunity to own a piece of downtown luxury.",
+        "price": "$400,000",
+        "status": "sale",
+        "area": "1500 sq ft",
+        "location": "101 Loft Avenue, Downtown Metropolis, USA",
+        "facilities": ["Exposed Brick Walls", "High Ceilings", "Rooftop Deck"],
+        "image": "https://i.ibb.co/hm3FsYt/nick-agee-Ri3-Sqoanv-CE-unsplash.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 8,
+        "estate_title": "Student Housing Near Campus",
+        "segment_name": "Student housing",
+        "description": "Discover the perfect student housing solution just steps away from campus. Located at 789 College Street in University Town, USA, this furnished residence offers convenience and comfort for university students. With one bedroom and one bathroom, it provides a cozy retreat for studying and relaxation. The communal study rooms and bike storage facilities cater to the needs of student life. Priced at $800 per month, this rental opportunity offers an affordable and hassle-free living experience for students.",
+        "price": "$800/month",
+        "status": "rent",
+        "area": "900 sq ft",
+        "location": "789 College Street, University Town, USA",
+        "facilities": ["Furnished", "Study Rooms", "Bike Storage"],
+        "image": "https://i.ibb.co/PGXV50X/laela-y-KM1-Jdsuf-YI-unsplash.jpg",
+        "button": "View Property"
+      },
+      {
+        "id": 9,
+        "estate_title": "Lakeside Retreat",
+        "segment_name": "Vacation rentals",
+        "description": "Escape to a tranquil lakeside retreat surrounded by the beauty of nature. Located at 10 Lakeshore Drive in Lakeview Haven, USA, this charming getaway offers peace and serenity away from the hustle and bustle of city life. With three bedrooms and two bathrooms, it provides ample space for relaxation and recreation. Whether you're fishing off the private dock, kayaking on the lake, or gathering around the fire pit, this retreat offers endless opportunities for outdoor adventure. Priced at $200 per night, this vacation rental promises a rejuvenating escape for the whole family.",
+        "price": "$200/night",
+        "status": "rent",
+        "area": "1600 sq ft",
+        "location": "10 Lakeshore Drive, Lakeview Haven, USA",
+        "facilities": ["Private Dock", "Kayaks", "Fire Pit"],
+        "image": "https://i.ibb.co/fq7n0jx/chris-ried-CTSm-Kg3-D4c-M-unsplash.jpg",
+        "button": "View Property"
+      }
+    ]
+  }
+  
