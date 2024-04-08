@@ -2,7 +2,7 @@ import Estate from "./Estate";
 
 
 const Estates = ({datas}) => {
-    console.log(datas);
+
     return (
         <div className="lg:mx-20 mb-24 mt-12">
             <h2 className="text-3xl text-[#131313] font-bold text-center mt-6">Estates</h2>
