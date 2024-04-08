@@ -54,8 +54,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user ? <button onClick={handleSignOut} className="btn btn-accent">Log Out </button> : 
-          <Link to={'/login'} className="btn btn-accent">Login</Link>
+          user ? <div className="flex items-center tooltip tooltip-left" data-tip={user.displayName || 'user'}>
+             <img src={user?.photoURL || '/user.jpg'} className="w-[50px] h-[50px] rounded-full" alt="" /> <button onClick={handleSignOut} className="btn btn-accent">Log Out </button>
+          </div> : 
+       
+           <Link to={'/login'} className="btn btn-accent">Login</Link>
+     
         }
        
       </div>

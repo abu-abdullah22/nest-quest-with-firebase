@@ -1,22 +1,48 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link,useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { set } from "firebase/database";
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext) ;
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [error, setError] = useState('') ;
+
+  const { createUser, setUser } = useContext(AuthContext);
   const handleRegister = e => {
-    e.preventDefault() ;
-    const email = e.target.email.value ;
-    const password = e.target.password.value ;
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    if(password.length< 6 ){
+      setError('Password must be 6 characters')
+      return
+    } else if(!/[a-z]/.test(password)){
+      setError('Password must contain a lower letter')
+      return 
+    } else if(!/[A-Z]/.test(password)){
+      setError('Password must contain an uppercase letter')
+      return
+    }
+
+    setError('')
 
     //create User 
-    createUser(email, password) 
-    .then(result => console.log(result.user))
-    .catch(error => console.log(error))
+    createUser(email, password)
+      .then(result=> {
+        setUser(null)
+      if(result.user) {
+        navigate(location?.state || '/') ;
+      }
+    })
+      .catch(error => console.log(error))
   }
-    return (
-        <div>
-         <div className="hero min-h-screen">
+
+
+  
+  return (
+    <div>
+      <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Create Account</h1>
@@ -46,7 +72,10 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input name="password" type="password" placeholder="password" className="input input-bordered" required />
-              </div>
+              </div>{
+                error && 
+               <small className="text-red-800">{error}</small>
+              }
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Register</button>
               </div>
@@ -55,8 +84,8 @@ const Register = () => {
           </div>
         </div>
       </div>
-       </div>
-    );
+    </div>
+  );
 };
 
 export default Register;
