@@ -2,30 +2,52 @@ import { useParams, useLoaderData } from 'react-router-dom'
 
 const EstateDetails = () => {
     const { id } = useParams() ;
-    console.log(typeof id);
     const idInt = parseInt(id) ;
     const estates = useLoaderData() ;
     const estatesData =  estates.properties ;
 
     const estate = estatesData?.find((estate) => estate.id === idInt)
-    console.log(estate);
+
     return (
         <section className="dark:bg-gray-100 dark:text-gray-800">
-            <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-                    <img src="assets/svg/Business_SVG.svg" alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128" />
+            <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around">
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
+                    <img src={estate.image} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-lg" />
                 </div>
-                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                    <h1 className="text-5xl font-bold leading-none sm:text-6xl">
-                    
+                <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                    <h1 className="text-5xl font-bold leading-none sm:text-6xl text-[#131313]">
+                    {estate.estate_title}
                     </h1>
-                    <p className="mt-6 mb-8 text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
-                        <br className="hidden md:inline lg:hidden" />turpis pulvinar, est scelerisque ligula sem
+                    <h1 className="text-2xl font-bold leading-none sm:text-2xl mt-3 text-[#131313CC]">
+                    #{estate.segment_name}
+                    </h1>
+                    <p className="my-6 text-lg sm:mb-12 text-[#131313CC]">
+                        {estate.description}
                     </p>
-                    <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Suspendisse</a>
-                        <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800">Malesuada</a>
-                    </div>
+                  <div className='flex gap-4'>
+                  <p className='border-2 border-gray-100 rounded p-2'>
+                        {estate.facilities[0]}
+        
+                    </p>
+                  <p className='border-2 border-gray-100 rounded p-2'>
+                        {estate.facilities[1]}
+        
+                    </p>
+                  <p className='border-2 border-gray-100 rounded p-2'>
+                        {estate.facilities[2]}
+        
+                    </p>
+                  </div>
+
+                  <div className='mt-4'>
+                   <p> <span className='text-[#131313B2] font-medium'> Price :</span> <span className='font-medium'>{estate.price}</span></p>
+                   <p><span className='text-[#131313B2] font-medium'> Area :</span> <span className='font-medium'> {estate.area}</span></p>
+                   <p> <span className='text-[#131313B2] font-medium'> Status :</span> <span className='font-medium'> {estate.status}</span></p>
+                   <p><span className='text-[#131313B2] font-medium'>Location :</span> <span className='font-medium'> {estate.location}</span></p>
+                  </div>
+                  <div className='mt-6'>
+                    <button className='btn btn-accent'>Buy Now</button>
+                  </div>
                 </div>
             </div>
         </section>
