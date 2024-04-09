@@ -4,11 +4,11 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import {Helmet} from "react-helmet";
 
 
 
 const Register = () => {
-  const navigate = useNavigate();
 
   const [error, setError] = useState('') ;
   const [show, setShow] = useState(false)
@@ -57,6 +57,9 @@ const Register = () => {
   
   return (
     <div>
+      <Helmet>
+        <title>Register - Nestquest</title>
+      </Helmet>
       <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">

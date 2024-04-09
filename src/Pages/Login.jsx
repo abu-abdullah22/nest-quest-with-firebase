@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import { FaGithub } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {Helmet} from "react-helmet";
 
 const Login = () => {
   const {signIn, googleLogin, githubLogin,user} = useContext(AuthContext) ;
+  const [show, setShow] = useState(false) ;
   console.log(user);
   const navigate = useNavigate() ;
   const location = useLocation() ;
@@ -59,7 +61,11 @@ const Login = () => {
   }
     return (
        <div>
-    
+    <Helmet>
+      <title>
+        Login - NestQuest
+      </title>
+    </Helmet>
          <div className="hero min-h-screen">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
@@ -77,7 +83,14 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+               <div className="space-x-2">
+               <input name="password"  type={show ? 'text' :"password" } placeholder="password" className="input input-bordered" required />
+                <span className="" onClick={()=> setShow(!show)}>
+                   {
+                    show ? <button className="btn btn-primary"><FaEyeSlash></FaEyeSlash></button> : <button className="btn btn-neutral"><FaEye></FaEye></button>
+                   }
+                  </span>
+               </div>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>

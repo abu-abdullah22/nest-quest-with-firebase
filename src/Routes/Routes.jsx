@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import EstateDetails from "../Pages/EstateDetails";
 import PrivateRoute from "../Pages/PrivateRoute";
+import UserProfile from "../Pages/UserProfile";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
         path: '/estate/:id',
         element: <PrivateRoute> <EstateDetails></EstateDetails></PrivateRoute>,
         loader: () => fetch('/data.json')
+      },
+      {
+        path: '/user-profile',
+        element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
       }
     ]
   },

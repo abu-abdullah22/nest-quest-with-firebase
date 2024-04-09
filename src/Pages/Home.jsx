@@ -5,6 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
+import {Helmet} from 'react-helmet'
 
  
 
@@ -12,11 +13,14 @@ const Home = () => {
     const datas = useLoaderData() ;
     return (
         <div>
+            <Helmet>
+                <title>Home - NestQuest</title>
+            </Helmet>
         <div data-aos="flip-down"
         data-aos-offset="200">
         <Banner></Banner>
         </div>
-           <div data-aos="fade-left"
+           <div data-aos="fade-up"
         data-aos-offset="400">
            <Estates datas={datas}></Estates>
            </div>

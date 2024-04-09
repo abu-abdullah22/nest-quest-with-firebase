@@ -1,27 +1,29 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useNavigate, useLocation} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import 'animate.css';
+import {Helmet} from "react-helmet";
 
 
 const UpdateProfile = () => {
 
     const { updateUser} = useContext(AuthContext);
     const navigate = useNavigate();
-    const location = useLocation();
    
     const handleUpdate = (e) => {
         const Name = e.target.name.value;
         const Photo = e.target.photo.value;
 
         updateUser(Name, Photo) ;
-        navigate(location.state || '/')
-        
-        
+        navigate('/')      
 
     }
     return (
         <div>
-            <div className="hero min-h-screen">
+            <Helmet>
+                <title>Update - NestQuest</title>
+            </Helmet>
+            <div className="hero min-h-screen animate__animated animate__bounceInLeft">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Update Account</h1>
