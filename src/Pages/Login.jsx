@@ -3,6 +3,8 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const {signIn, googleLogin, githubLogin,user} = useContext(AuthContext) ;
@@ -22,7 +24,13 @@ const Login = () => {
         navigate(location?.state || '/') ;
       }
     })
-    .catch(error=> console.log(error))
+    .catch(error=>{
+      if (error.code) {
+       toast.error('Wrong Pass')
+      } else {
+        toast('Error loggin in')
+      }
+    })
 
   }
 
@@ -88,6 +96,7 @@ const Login = () => {
         </div>
       
       </div>
+      <ToastContainer />
        </div>
     );
 };

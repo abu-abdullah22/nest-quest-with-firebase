@@ -1,11 +1,17 @@
 import { useContext, useState } from "react";
-import { Link,useNavigate, useLocation } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+
 
 const Register = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+
   const [error, setError] = useState('') ;
+  const [show, setShow] = useState(false)
 
   const { createUser, updateUser, setUser} = useContext(AuthContext);
   const handleRegister = e => {
@@ -35,10 +41,16 @@ const Register = () => {
         updateUser(Name, Photo)
         .then(()=> {
           setUser(null) ;
-          navigate(location?.state || '/login') ;
-        }) ;
-        
-    }) ;
+          toast.success('Account Created Successfully') ;
+  
+        }) 
+        .catch(error=>{
+          setError('Registration Failed', error)
+        })
+    }) 
+    .catch(error=> {
+      setError('Registration failed', error)
+    })
   }     
 
 
@@ -74,7 +86,17 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input name="password" type="password" placeholder="password" className="input input-bordered" required />
+                <div className="flex items-center gap-2">
+                <input name="password" 
+                type={show ? 'text' :"password" }
+                
+                placeholder="password" className="input input-bordered" required />
+                <span className="" onClick={()=> setShow(!show)}>
+                   {
+                    show ? <button className="btn btn-primary"><FaEyeSlash></FaEyeSlash></button> : <button className="btn btn-neutral"><FaEye></FaEye></button>
+                   }
+                  </span>
+                </div>
               </div>{
                 error && 
                <small className="text-red-800">{error}</small>
@@ -87,6 +109,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
