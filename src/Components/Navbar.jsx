@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import 'animate.css';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext) ;
@@ -16,12 +17,12 @@ const Navbar = () => {
         <NavLink className="font-medium" to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink className="font-mediumNav" to={"/update-profile"}>Update Profile</NavLink>
+        <NavLink className="font-medium" to={"/update-profile"}>Update Profile</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 animate__animated animate__bounce">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,8 +55,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user ? <div className="flex items-center tooltip tooltip-left" data-tip={user.displayName || 'user'}>
-             <img src={user?.photoURL || '/user.jpg'} className="w-[50px] h-[50px] rounded-full" alt="" /> <button onClick={handleSignOut} className="btn btn-accent">Log Out </button>
+          user ? <div className="flex items-center" >
+           <div className=" tooltip tooltip-left mr-2" data-tip={user.displayName || 'user'}>
+           <img src={user?.photoURL || '/user.jpg'} className="w-[50px] h-[50px] rounded-full" alt="" /> 
+           </div>
+             <button onClick={handleSignOut} className="btn btn-accent">Log Out </button>
           </div> : 
        
            <Link to={'/login'} className="btn btn-accent">Login</Link>

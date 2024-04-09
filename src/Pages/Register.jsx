@@ -1,18 +1,19 @@
 import { useContext, useState } from "react";
 import { Link,useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import { set } from "firebase/database";
 
 const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [error, setError] = useState('') ;
 
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser, updateUser, setUser} = useContext(AuthContext);
   const handleRegister = e => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const Name = e.target.name.value;
+    const Photo = e.target.photo.value;
 
     if(password.length< 6 ){
       setError('Password must be 6 characters')
@@ -29,14 +30,16 @@ const Register = () => {
 
     //create User 
     createUser(email, password)
-      .then(result=> {
-        setUser(null)
-      if(result.user) {
-        navigate(location?.state || '/') ;
-      }
-    })
-      .catch(error => console.log(error))
-  }
+      .then((result)=> {
+        console.log(result.user);
+        updateUser(Name, Photo)
+        .then(()=> {
+          setUser(null) ;
+          navigate(location?.state || '/login') ;
+        }) ;
+        
+    }) ;
+  }     
 
 
   

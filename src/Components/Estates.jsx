@@ -1,6 +1,5 @@
 import Estate from "./Estate";
 
-
 const Estates = ({datas}) => {
 
     return (

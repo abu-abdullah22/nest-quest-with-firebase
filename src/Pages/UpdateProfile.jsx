@@ -1,22 +1,24 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const UpdateProfile = () => {
-    const navigate = useNavigate ;
-    const location = useLocation
 
-    const { updateUser, createUser} = useContext(AuthContext);
+    const { updateUser} = useContext(AuthContext);
+    const navigate = useNavigate();
    
     const handleUpdate = (e) => {
         const Name = e.target.name.value;
         const Photo = e.target.photo.value;
 
-        createUser() .then(()=> {
-            updateUser(Name,Photo) .then(()=> {
-                navigate(location?.state || '/')
-            })
+        updateUser(Name, Photo)
+        .then((result)=> {
+            navigate(location?.state || '/') ;
+            console.log(result.user);
+        }) 
+        .catch(error => {
+            console.log(error);
         })
         
 
