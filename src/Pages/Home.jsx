@@ -6,6 +6,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 import {Helmet} from 'react-helmet'
+import Different from "../Components/Different";
+import Team from "../Components/Team";
 
  
 
@@ -23,6 +25,14 @@ const Home = () => {
            <div data-aos="fade-up"
         data-aos-offset="400">
            <Estates datas={datas}></Estates>
+           </div>
+           <div data-aos="fade-down"
+        data-aos-offset="400">
+            <Different></Different>
+           </div>
+           <div data-aos="fade-up"
+        data-aos-offset="400">
+            <Team></Team>
            </div>
         </div>
     );

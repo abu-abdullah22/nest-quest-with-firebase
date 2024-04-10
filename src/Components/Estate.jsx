@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Estate = ({data}) => {
     return (
-        <div className="card card-compact bg-base-100 shadow-xl mx-5 hover:scale-105 hover:border-2 border-gray-300 hover:cursor-pointer">
+        <div className="card card-compact bg-base-100 shadow-xl mx-5 hover:cursor-pointer">
         <figure><img className="rounded mt-4 h-[214px]"  src={data.image} alt="" /></figure>
         <div className="card-body">
           <h2 className="card-title text-2xl text-[#131313]">{data.estate_title}</h2>

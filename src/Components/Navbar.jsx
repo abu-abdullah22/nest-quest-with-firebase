@@ -22,6 +22,9 @@ const Navbar = () => {
       <li>
         <NavLink className="font-medium" to={"/update-profile"}>Update Profile</NavLink>
       </li>
+      <li>
+        <NavLink className="font-medium" to={"/feedback"}>Feedback</NavLink>
+      </li>
     </>
   );
   return (

@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import {Helmet} from "react-helmet";
+import 'animate.css';
 
 
 
@@ -13,7 +14,7 @@ const Register = () => {
   const [error, setError] = useState('') ;
   const [show, setShow] = useState(false)
 
-  const { createUser, updateUser, setUser} = useContext(AuthContext);
+  const { createUser, updateUser} = useContext(AuthContext);
   const handleRegister = e => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -40,7 +41,6 @@ const Register = () => {
         console.log(result.user);
         updateUser(Name, Photo)
         .then(()=> {
-          setUser(null) ;
           toast.success('Account Created Successfully') ;
   
         }) 
@@ -51,8 +51,13 @@ const Register = () => {
     .catch(error=> {
       setError('Registration failed', error)
     })
-  }     
+    e.target.email.value = '' ;
+    e.target.name.value = '' ;
+    e.target.password.value = '' ;
+    e.target.photo.value = '' ;
 
+   
+  }   
 
   
   return (
@@ -60,7 +65,7 @@ const Register = () => {
       <Helmet>
         <title>Register - Nestquest</title>
       </Helmet>
-      <div className="hero min-h-screen">
+      <div className="hero min-h-screen  animate__animated animate__bounceInRight">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Create Account</h1>

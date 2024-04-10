@@ -7,11 +7,14 @@ import Register from "../Pages/Register";
 import EstateDetails from "../Pages/EstateDetails";
 import PrivateRoute from "../Pages/PrivateRoute";
 import UserProfile from "../Pages/UserProfile";
+import Error from "../Pages/Error";
+import FeedBack from "../Pages/FeedBack";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -38,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: '/user-profile',
         element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
+      },
+      {
+        path: '/feedback',
+        element:<PrivateRoute> <FeedBack></FeedBack></PrivateRoute>
       }
     ]
   },

@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { useNavigate} from "react-router-dom";
 import 'animate.css';
 import {Helmet} from "react-helmet";
 
@@ -8,14 +7,12 @@ import {Helmet} from "react-helmet";
 const UpdateProfile = () => {
 
     const { updateUser} = useContext(AuthContext);
-    const navigate = useNavigate();
    
     const handleUpdate = (e) => {
         const Name = e.target.name.value;
         const Photo = e.target.photo.value;
 
-        updateUser(Name, Photo) ;
-        navigate('/')      
+        updateUser(Name, Photo) ;     
 
     }
     return (

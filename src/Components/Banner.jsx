@@ -29,7 +29,7 @@ const Banner = () => {
       >
         <SwiperSlide>
           <img className='relative contrast-50' src="/banner1.jpg" />
-          <div className='absolute hidden md:block md:top-[20%] left-[10%] md:left-[30%] lg:top-[30%]'>
+          <div className='absolute hidden md:block  md:top-[20%] left-[10%] md:left-[30%] '>
             <p className='md:w-3/4 lg:w-1/2 lg:text-center text-[#131313] font-medium bg-[#eeeedd] p-3 mt-2 chat chat-bubble animate__animated animate__bounceInLeft'>
               <span className='md:text-5xl text-2xl font-medium '>Your First Choice of Residence</span> <br /> <br />
               Discover Your Dream Home with Ease! Welcome to our premier residential real estate website, where your perfect property awaits. Explore a curated selection of homes, apartments, townhouses, and vacation rentals tailored to your lifestyle. Find your ideal sanctuary today!</p>
@@ -37,7 +37,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img className='relative contrast-50' src="/banner3.jpg" />
-          <div className='absolute top-[20%] md:top-[35%] left-[10%] md:left-[30%]'>
+          <div className='absolute top-[20%] hidden md:block  md:top-[20%] left-[10%] md:left-[30%]'>
           <p className='md:w-3/4 lg:w-1/2 lg:text-center text-[#131313] font-medium bg-[#eeeedd] p-3 mt-2 chat chat-bubble '>
               <span className='md:text-5xl text-2xl font-medium '>Your First Choice of Residence</span> <br /> <br />
               Discover Your Dream Home with Ease! Welcome to our premier residential real estate website, where your perfect property awaits. Explore a curated selection of homes, apartments, townhouses, and vacation rentals tailored to your lifestyle. Find your ideal sanctuary today!</p>
@@ -45,7 +45,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img className='relative contrast-50' src="/banner4.jpg" />
-          <div className='absolute top-[20%] md:top-[35%] left-[10%] md:left-[30%]'>
+          <div className='absolute hidden md:block  md:top-[20%] left-[10%] md:left-[30%]'>
           <p className='md:w-3/4 lg:w-1/2 lg:text-center text-[#131313] font-medium bg-[#eeeedd] p-3 mt-2 chat chat-bubble'>
               <span className='md:text-5xl text-2xl font-medium '>Your First Choice of Residence</span> <br /> <br />
               Discover Your Dream Home with Ease! Welcome to our premier residential real estate website, where your perfect property awaits. Explore a curated selection of homes, apartments, townhouses, and vacation rentals tailored to your lifestyle. Find your ideal sanctuary today!</p>
@@ -53,7 +53,7 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img className='relative contrast-50' src="/banner5.jpg" />
-          <div className='absolute top-[20%] md:top-[40%] left-[10%] md:left-[30%]'>
+          <div className='absolute hidden md:block lg:top-[20%] md:top-[20%] left-[10%] md:left-[30%]'>
           <p className='md:w-3/4 lg:w-1/2 lg:text-center text-[#131313] font-medium bg-[#eeeedd] p-3 mt-2 chat chat-bubble'>
               <span className='md:text-5xl text-2xl font-medium '>Your First Choice of Residence</span> <br /> <br />
               Discover Your Dream Home with Ease! Welcome to our premier residential real estate website, where your perfect property awaits. Explore a curated selection of homes, apartments, townhouses, and vacation rentals tailored to your lifestyle. Find your ideal sanctuary today!</p>

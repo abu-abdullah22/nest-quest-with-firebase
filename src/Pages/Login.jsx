@@ -6,6 +6,7 @@ import { FaGoogle } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {Helmet} from "react-helmet";
+import 'animate.css';
 
 const Login = () => {
   const {signIn, googleLogin, githubLogin,user} = useContext(AuthContext) ;
@@ -66,7 +67,7 @@ const Login = () => {
         Login - NestQuest
       </title>
     </Helmet>
-         <div className="hero min-h-screen">
+         <div className="hero min-h-screen  animate__animated animate__bounceInLeft">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
