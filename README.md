@@ -4,11 +4,11 @@
 [Visit NestQuest](https://nest-quest-a5aa5.web.app/)
 
 ## Features and Characteristics
-- **Property Listings:** Browse through a wide selection of real estate listings, including residential homes, apartments, commercial properties, and land.
-- **Advanced Search:** Utilize advanced search filters to narrow down listings based on criteria such as location, price range, property type, and amenities.
-- **Interactive Map View:** View properties on an interactive map interface, allowing users to explore available listings in their desired area with ease.
-- **Responsive Design:** Enjoy a seamless browsing experience across various devices, including desktops, laptops, tablets, and smartphones.
-- **User Accounts:** Register and log in to access additional features such as saving favorite listings, tracking property views, and receiving personalized recommendations.
+- **User Accounts:** Register and log in to access personalized features such as saving favorite listings, tracking property views, and receiving recommendations tailored to your preferences.
+- **Update User Account:** Easily update your profile information, including contact details, preferences, and notification settings, to ensure a seamless and personalized experience.
+- **Estate Details:** Explore comprehensive details for each property listing, including descriptions, high-resolution images, floor plans, amenities, and contact information for inquiries.
+- **Animation:** Enjoy a visually engaging experience with smooth animations throughout the website, enhancing user interaction and making the browsing experience more dynamic and enjoyable.
+- **Slider Banner:** Navigate through featured listings and promotions with a captivating slider banner on the homepage, showcasing the latest properties and exclusive offers in an eye-catching manner.
 
 ## NPM Packages Used
 - **Swiper Slider:** [swiper](https://www.npmjs.com/package/swiper) - A powerful and customizable slider component for creating interactive and responsive slideshows.
