@@ -41,8 +41,9 @@ const Register = () => {
         console.log(result.user);
         updateUser(Name, Photo)
         .then(()=> {
-          setUser({displayName: Name, photoURL: Photo})
           toast.success('Account Created Successfully') ;
+          setUser({displayName: Name, photoURL: Photo})
+    
   
         }) 
         .catch(error=>{
