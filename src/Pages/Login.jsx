@@ -84,12 +84,12 @@ const Login = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-               <div className="space-x-2">
+               <div className="gap-2 flex items-center">
                <input name="password"  type={show ? 'text' :"password" } placeholder="password" className="input input-bordered" required />
                 <span className="" onClick={()=> setShow(!show)}>
                    {
-                    show ? <button className="btn btn-primary"><FaEyeSlash></FaEyeSlash></button> : <button className="btn btn-neutral"><FaEye></FaEye></button>
-                   }
+                    show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye> 
+                    }
                   </span>
                </div>
               </div>

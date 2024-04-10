@@ -45,11 +45,11 @@ const Register = () => {
   
         }) 
         .catch(error=>{
-          setError('Registration Failed', error)
+          toast.error('Registration Failed', error)
         })
     }) 
     .catch(error=> {
-      setError('Registration failed', error)
+      toast.error('Registration failed', error)
     })
     e.target.email.value = '' ;
     e.target.name.value = '' ;
@@ -101,7 +101,7 @@ const Register = () => {
                 placeholder="password" className="input input-bordered" required />
                 <span className="" onClick={()=> setShow(!show)}>
                    {
-                    show ? <button className="btn btn-primary"><FaEyeSlash></FaEyeSlash></button> : <button className="btn btn-neutral"><FaEye></FaEye></button>
+                    show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                    }
                   </span>
                 </div>
