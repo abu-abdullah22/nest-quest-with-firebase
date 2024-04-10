@@ -1,5 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 AOS.init();
 const Footer = () => {
     return (
@@ -9,18 +10,16 @@ const Footer = () => {
                 <p className="font-medium">NestQuest<br />Your First Choice of Residence</p>
             </aside>
             <nav>
-                <h6 className="footer-title">Services</h6>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <h6 className="footer-title">Pages</h6>
+                <Link to={'/'} className="link link-hover">Home</Link>
+                <Link to={'/user-profile'} className="link link-hover">User Profile</Link>
+                <Link to={'/update-profile'} className="link link-hover">Update Profile</Link>
+                <Link to={'/feedback'} className="link link-hover">Feedback</Link>
             </nav>
             <nav>
-                <h6 className="footer-title">Company</h6>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
-                <a className="link link-hover">Press kit</a>
+                <h6 className="footer-title">Join</h6>
+                <Link to={'/login'} className="link link-hover">Login</Link>
+                <Link to={'/register'} className="link link-hover">Register</Link>
             </nav>
             <nav>
                 <h6 className="footer-title">Legal</h6>
