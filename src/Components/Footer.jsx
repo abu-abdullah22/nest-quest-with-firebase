@@ -11,9 +11,8 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Pages</h6>
                 <Link to={'/'} className="link link-hover">Home</Link>
-                <Link to={'/user-profile'} className="link link-hover">User Profile</Link>
-                <Link to={'/update-profile'} className="link link-hover">Update Profile</Link>
-                <Link to={'/feedback'} className="link link-hover">Feedback</Link>
+                <Link to={'/contact'} className="link link-hover">Contact</Link>
+                <Link to={'/timeline'} className="link link-hover">Timeline</Link>
             </nav>
             <nav>
                 <h6 className="footer-title">Join</h6>

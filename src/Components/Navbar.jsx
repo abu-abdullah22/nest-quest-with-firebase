@@ -1,24 +1,24 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import 'animate.css';
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext) ;
 
   const handleSignOut = () => {
     logOut()
-    .then()
-    .catch()
+    .then(result=> {
+      console.log(result.user);
+    })
+    .catch(error=> {
+      console.log(error);
+    })
   }
   const navLink = (
     <>
       <li>
         <NavLink className="font-medium" to={"/"}>Home</NavLink>
       </li>
-     { user && <li>
-        <NavLink className="font-medium" to={"/user-profile"}>Profile</NavLink>
-      </li>}
       {user && <li>
         <NavLink className="font-medium" to={"/update-profile"}>Update Profile</NavLink>
       </li>}
@@ -35,7 +35,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 animate__animated animate__bounce">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,7 +56,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content  z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content z-50 p-2 shadow bg-base-100 rounded-box w-52 border-2 border-gray-300"
           >
             {navLink}
           </ul>

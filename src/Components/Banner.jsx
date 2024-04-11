@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 const Banner = () => {
     return (
-        <div className='w-[90vw] mx-auto lg:mt-5 mt-28'>
+        <div className='w-[90vw] mx-auto lg:mt-5 mt-10 lg:mt-22'>
              <Swiper
         effect={'coverflow'}
         grabCursor={true}

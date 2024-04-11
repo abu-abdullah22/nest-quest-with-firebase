@@ -1,7 +1,7 @@
 import 'animate.css';
 const TimeLine = () => {
     return (
-       <div className='animate__animated animate__bounceInUp'>
+       <div className='animate__animated animate__bounceInUp z-1'>
         <h1 className="text-4xl mt-12 font-medium text-center">How We Manage To Do Things</h1>
          <ul className="p-4 lg:p-8 bg-gray-800 text-gray-100 mt-10 mb-40 md:mx-24 mx-4 rounded-lg">
             <li>
