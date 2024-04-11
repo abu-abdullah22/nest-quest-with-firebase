@@ -31,7 +31,7 @@ const UpdateProfile = () => {
                     <div className="text-center lg:text-left flex flex-col">
                         <h1 className="text-5xl font-bold">Update Account</h1>
                         <div className="my-8 border-2 border-gray-400 flex flex-col items-center p-5 gap-3 rounded-lg">
-                            <img className="w-[200px] rounded-full" src={user.photoURL} alt="" />
+                            <img className="w-[200px] rounded-full h-[200px]" src={user.photoURL} alt="" />
                             <p className="font-medium">Email : {user.email}</p>
                         </div>
                     </div>
