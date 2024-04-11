@@ -24,13 +24,13 @@ const Login = () => {
     signIn(email, password)
     .then(result=> {
       if(result.user) {
-        toast.success('Successful Login',{position: 'top-center'}) ;
+        toast.success('Login successful',{position: 'top-center'}) ;
         navigate(location?.state || '/') ;
       }
     })
     .catch(error=>{
       if (error.code) {
-       toast.error('Wrong Pass')
+       toast.error('Wrong Password')
       } else {
         toast('Error loggin in')
       }
