@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Estate = ({data}) => {
     return (
@@ -18,3 +19,6 @@ const Estate = ({data}) => {
 };
 
 export default Estate;
+Estate.propTypes = {
+  data : PropTypes.object
+}

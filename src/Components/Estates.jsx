@@ -1,4 +1,5 @@
 import Estate from "./Estate";
+import PropTypes from 'prop-types';
 
 const Estates = ({datas}) => {
 
@@ -16,4 +17,7 @@ const Estates = ({datas}) => {
 };
 
 export default Estates;
+Estates.propTypes = {
+    datas : PropTypes.array 
+}
 
