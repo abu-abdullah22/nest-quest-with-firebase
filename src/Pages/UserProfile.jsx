@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 const UserProfile = () => {
     const { user } = useContext(AuthContext);
     return (
-        <div className="card bg-base-100 shadow-xl h-[85vh] lg:mt-20 mt-24  flex justify-start items-center animate__animated animate__bounceInRight">
+        <div className="card bg-base-100 shadow-xl h-[90vh] lg:mt-20 flex justify-start items-center animate__animated animate__bounceInRight">
             <Helmet>
                 <title>User - NestQuest</title>
             </Helmet>

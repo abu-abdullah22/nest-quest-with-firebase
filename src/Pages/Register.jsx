@@ -1,8 +1,7 @@
 import { useContext, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import {Helmet} from "react-helmet";
 import 'animate.css';
@@ -12,7 +11,8 @@ import 'animate.css';
 const Register = () => {
 
   const [error, setError] = useState('') ;
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false) ;
+  const navigate = useNavigate()
 
   const { createUser, updateUser, setUser} = useContext(AuthContext);
   const handleRegister = e => {
@@ -41,8 +41,10 @@ const Register = () => {
         console.log(result.user);
         updateUser(Name, Photo)
         .then(()=> {
-          toast.success('Account Created Successfully') ;
-          setUser({displayName: Name, photoURL: Photo})
+          toast.success('Account Created Successfully',  {
+            position: "top-center"}) ;
+          setUser({displayName: Name, photoURL: Photo}) ;
+          navigate('/')
     
   
         }) 
@@ -119,7 +121,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 };

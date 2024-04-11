@@ -3,10 +3,10 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {  toast } from 'react-toastify';
 import {Helmet} from "react-helmet";
 import 'animate.css';
+
 
 const Login = () => {
   const {signIn, googleLogin, githubLogin,user} = useContext(AuthContext) ;
@@ -24,6 +24,7 @@ const Login = () => {
     signIn(email, password)
     .then(result=> {
       if(result.user) {
+        toast.success('Successful Login',{position: 'top-center'}) ;
         navigate(location?.state || '/') ;
       }
     })
@@ -40,7 +41,9 @@ const Login = () => {
   const handleGoogle = () => {
     googleLogin()
     .then(result=> {
+  
       if(result.user) {
+        toast.success('Login Successful',{position: 'top-center'}) ;
         navigate(location?.state || '/') ;
       }
     })
@@ -53,6 +56,7 @@ const Login = () => {
     githubLogin()
     .then(result=> {
       if(result.user) {
+        toast.success('Login Successful',{position: 'top-center'})
         navigate(location?.state || '/') ;
       }
     })
@@ -110,7 +114,6 @@ const Login = () => {
         </div>
       
       </div>
-      <ToastContainer />
        </div>
     );
 };
