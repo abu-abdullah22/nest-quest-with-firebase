@@ -24,7 +24,7 @@ const Login = () => {
     signIn(email, password)
     .then(result=> {
       if(result.user) {
-        toast.success('Login successful',{position: 'top-center'}) ;
+        toast.success('Login successful') ;
         navigate(location?.state || '/') ;
       }
     })
@@ -43,12 +43,13 @@ const Login = () => {
     .then(result=> {
   
       if(result.user) {
-        toast.success('Login Successful',{position: 'top-center'}) ;
+        toast.success('Login Successful') ;
         navigate(location?.state || '/') ;
       }
     })
     .catch(error=> {
       console.log(error);
+      toast('Error loggin in')
     })
   }
 
@@ -56,12 +57,13 @@ const Login = () => {
     githubLogin()
     .then(result=> {
       if(result.user) {
-        toast.success('Login Successful',{position: 'top-center'})
+        toast.success('Login Successful')
         navigate(location?.state || '/') ;
       }
     })
     .catch(error=> {
       console.log(error);
+      toast('Error loggin in') ;
     })
   }
     return (

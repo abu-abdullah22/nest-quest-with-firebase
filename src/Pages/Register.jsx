@@ -41,8 +41,7 @@ const Register = () => {
         console.log(result.user);
         updateUser(Name, Photo)
         .then(()=> {
-          toast.success('Account Created Successfully',  {
-            position: "top-center"}) ;
+          toast.success('Account Created Successfully') ;
           setUser({displayName: Name, photoURL: Photo}) ;
           navigate('/')
     

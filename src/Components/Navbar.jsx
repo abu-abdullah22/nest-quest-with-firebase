@@ -17,13 +17,20 @@ const Navbar = () => {
         <NavLink className="font-medium" to={"/"}>Home</NavLink>
       </li>
      { user && <li>
-        <NavLink className="font-medium" to={"/user-profile"}>User Profile</NavLink>
+        <NavLink className="font-medium" to={"/user-profile"}>Profile</NavLink>
       </li>}
-      <li>
+      {user && <li>
         <NavLink className="font-medium" to={"/update-profile"}>Update Profile</NavLink>
+      </li>}
+     { user &&  <li>
+        <NavLink className="font-medium" to={"/feedback"}>Feedback</NavLink>
+      </li>}
+
+      <li>
+        <NavLink className="font-medium" to={"/contact"}>Contact</NavLink>
       </li>
       <li>
-        <NavLink className="font-medium" to={"/feedback"}>Feedback</NavLink>
+        <NavLink className="font-medium" to={"/timeLine"}>Time Line</NavLink>
       </li>
     </>
   );

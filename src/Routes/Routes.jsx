@@ -9,6 +9,8 @@ import PrivateRoute from "../Pages/PrivateRoute";
 import UserProfile from "../Pages/UserProfile";
 import Error from "../Pages/Error";
 import FeedBack from "../Pages/FeedBack";
+import Contact from "../Pages/Contact";
+import TimeLine from "../Pages/TimeLine";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ export const router = createBrowserRouter([
       {
         path: '/feedback',
         element:<PrivateRoute> <FeedBack></FeedBack></PrivateRoute>
+      }, 
+      {
+        path: '/contact',
+        element : <Contact></Contact>
+      }, 
+      {
+        path: '/timeline',
+        element: <TimeLine></TimeLine>
       }
     ]
   },
