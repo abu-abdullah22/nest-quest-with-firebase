@@ -16,10 +16,10 @@ const EstateDetails = () => {
                 <title>Details - NestQuest</title>
             </Helmet>
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row-reverse lg:justify-around">
-                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 animate__animated animate__bounceIn">
+                <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 animate__animated animate__bounceInDown">
                     <img src={estate.image} alt="" className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-lg" />
                 </div>
-                <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left animate__animated animate__fadeInRight">
+                <div className="flex flex-col justify-center  text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left animate__animated animate__bounceInUp">
                     <h1 className="text-5xl font-bold leading-none sm:text-6xl text-[#131313]">
                     {estate.estate_title}
                     </h1>

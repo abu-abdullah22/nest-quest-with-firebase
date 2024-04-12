@@ -1,7 +1,11 @@
 import 'animate.css';
+import {Helmet} from "react-helmet";
 const Contact = () => {
     return (
         <section className="py-6 bg-gray-800 text-gray-50 md:mx-24 max-w-5xl lg:mx-auto mx-4 rounded-lg mt-24 lg:mt-32 mb-40 mx-10 animate__animated animate__bounceInDown">
+            <Helmet>
+                <title>Contact- NestQuest</title>
+            </Helmet>
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <div className="py-6 md:py-0 md:px-6">
                     <h1 className="text-4xl font-bold">Get in touch</h1>

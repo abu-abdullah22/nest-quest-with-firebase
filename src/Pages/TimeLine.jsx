@@ -1,4 +1,5 @@
 import 'animate.css';
+import {Helmet} from "react-helmet";
 const TimeLine = () => {
     return (
        <div className='animate__animated animate__bounceInUp z-1'>

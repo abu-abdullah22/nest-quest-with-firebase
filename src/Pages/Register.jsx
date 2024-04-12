@@ -68,7 +68,7 @@ const Register = () => {
       <Helmet>
         <title>Register - Nestquest</title>
       </Helmet>
-      <div className="hero min-h-screen  animate__animated animate__bounceInRight">
+      <div className="hero min-h-screen  animate__animated animate__bounceInUp">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Create Account</h1>
