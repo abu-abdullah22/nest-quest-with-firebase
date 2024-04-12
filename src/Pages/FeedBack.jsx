@@ -24,7 +24,7 @@ const FeedBack = () => {
             </div>
         </div>
         <div className="flex items-center justify-center">
-            <a rel="noopener noreferrer" href="#" className="text-sm text-gray-400 btn">Maybe later</a>
+            <a rel="noopener noreferrer" href="#" className="text-sm text-black btn">Maybe later</a>
         </div>
     </div>
     );
