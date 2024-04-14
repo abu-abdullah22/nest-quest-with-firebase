@@ -11,7 +11,7 @@ const EstateDetails = () => {
     const estate = estatesData?.find((estate) => estate.id === idInt)
 
     return (
-        <section className="dark:bg-gray-100 dark:text-gray-800">
+        <section className="dark:bg-gray-100 dark:text-gray-800 bg-gray-300 m-4 rounded-lg">
             <Helmet>
                 <title>Details - NestQuest</title>
             </Helmet>

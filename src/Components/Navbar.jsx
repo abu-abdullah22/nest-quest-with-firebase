@@ -9,11 +9,12 @@ const Navbar = () => {
   const handleSignOut = () => {
     logOut()
     .then(result=> {
-      toast('Logout successful')
+      toast.success('Logout successful')
       console.log(result.user);
     })
     .catch(error=> {
       console.log(error);
+      toast.error('Error logging out') ;
     })
   }
   const navLink = (

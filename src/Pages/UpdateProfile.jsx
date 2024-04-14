@@ -32,7 +32,7 @@ const UpdateProfile = () => {
                         <h1 className="text-5xl font-bold">Update Account</h1>
                         <div className="my-8 border-2 border-gray-400 flex flex-col items-center p-5 gap-3 rounded-lg">
                             <img className="w-[100px] rounded-full h-[100px]" src={user.photoURL} alt="" />
-                            <p className="font-medium">Email : {user.email}</p>
+                            {user.email && <p className="font-medium">Email : {user.email}</p>}
                         </div>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

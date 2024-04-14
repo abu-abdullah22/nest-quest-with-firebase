@@ -32,7 +32,7 @@ const Login = () => {
       if (error.code) {
        toast.error('Wrong Password')
       } else {
-        toast('Error loggin in')
+        toast.error('Error loggin in')
       }
     })
 
@@ -49,7 +49,7 @@ const Login = () => {
     })
     .catch(error=> {
       console.log(error);
-      toast('Error loggin in')
+      toast.error('Error loggin in')
     })
   }
 
@@ -63,7 +63,7 @@ const Login = () => {
     })
     .catch(error=> {
       console.log(error);
-      toast('Error loggin in') ;
+      toast.error('Error loggin in') ;
     })
   }
     return (
