@@ -97,17 +97,14 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <div className="flex items-center gap-2">
-                <input name="password" 
-                type={show ? 'text' :"password" }
-                
-                placeholder="password" className="input input-bordered" required />
-                <span className="" onClick={()=> setShow(!show)}>
+                <div className="gap-2 flex items-center">
+               <input name="password"  type={show ? 'text' :"password" } placeholder="password" className="input input-bordered relative w-full" required />
+                <span className="absolute right-10" onClick={()=> setShow(!show)}>
                    {
-                    show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
-                   }
+                    show ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye> 
+                    }
                   </span>
-                </div>
+               </div>
               </div>{
                 error && 
                <small className="text-red-800">{error}</small>
