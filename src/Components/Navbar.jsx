@@ -14,7 +14,6 @@ const Navbar = () => {
     })
     .catch(error=> {
       console.log(error);
-      toast.error('Error logging out') ;
     })
   }
   const navLink = (
