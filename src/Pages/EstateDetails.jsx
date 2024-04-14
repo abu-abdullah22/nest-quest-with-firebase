@@ -11,7 +11,7 @@ const EstateDetails = () => {
     const estate = estatesData?.find((estate) => estate.id === idInt)
 
     return (
-        <section className="dark:bg-gray-100 dark:text-gray-800 bg-gray-300 m-4 rounded-lg">
+        <section className="dark:bg-gray-100 dark:text-gray-800 m-4 rounded-lg">
             <Helmet>
                 <title>Details - NestQuest</title>
             </Helmet>
@@ -26,7 +26,7 @@ const EstateDetails = () => {
                     <h1 className="text-2xl font-bold leading-none sm:text-2xl mt-3 text-[#131313CC]">
                     #{estate.segment_name}
                     </h1>
-                    <p className="my-6 text-lg sm:mb-12 text-[#131313CC]">
+                    <p className="mt-6 text-lg mb-4 text-[#131313CC]">
                         {estate.description}
                     </p>
                   <div className='flex gap-4'>
@@ -50,9 +50,7 @@ const EstateDetails = () => {
                    <p> <span className='text-[#131313B2] font-medium'> Status :</span> <span className='font-medium'> {estate.status}</span></p>
                    <p><span className='text-[#131313B2] font-medium'>Location :</span> <span className='font-medium'> {estate.location}</span></p>
                   </div>
-                  <div className='mt-6'>
-                    <button className='btn btn-accent'>Buy Now</button>
-                  </div>
+
                 </div>
             </div>
         </section>
