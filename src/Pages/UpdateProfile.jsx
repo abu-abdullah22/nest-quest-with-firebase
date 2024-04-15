@@ -5,7 +5,7 @@ import {Helmet} from "react-helmet";
 
 
 const UpdateProfile = () => {
-    const {user} = useContext(AuthContext) ;
+    const {user, setUser} = useContext(AuthContext) ;
     const [name, setName] = useState('') ;
     const [photo, setPhoto] = useState('');
 
@@ -18,8 +18,10 @@ const UpdateProfile = () => {
 
     const { updateUser} = useContext(AuthContext);
    
-    const handleUpdate = () => {
-        updateUser(name, photo) ;     
+    const handleUpdate = (e) => {
+        e.preventDefault() ;
+        updateUser(name, photo) ; 
+        setUser({displayName: name, photoURL: photo})    
     }
     return (
         <div>
