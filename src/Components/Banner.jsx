@@ -1,11 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'animate.css';
-
 // Import Swiper styles
 import 'swiper/css';
 // import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 // import required modules
 import { Autoplay , EffectCoverflow, Pagination } from 'swiper/modules';
 const Banner = () => {
@@ -25,7 +23,7 @@ const Banner = () => {
         }}
         pagination={{clickable: true}}
         modules={[EffectCoverflow, Pagination, Autoplay]}
-        autoplay={{delay: 5000, disableOnInteraction: false}}
+        autoplay={{delay: 4000, disableOnInteraction: false}}
         className="mySwiper rounded-lg lg:h-[90vh]"
       >
         <SwiperSlide>
