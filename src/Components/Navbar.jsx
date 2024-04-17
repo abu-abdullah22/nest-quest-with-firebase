@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext) ;
+  const {user, logOut, loading} = useContext(AuthContext) ;
 
   const handleSignOut = () => {
     logOut()
@@ -70,16 +70,19 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
+          loading && <span className="loading loading-dots loading-lg"></span>  
+        }
+        {
           user ? <div className="flex items-center" >
            <div className=" tooltip tooltip-left mr-2" data-tip={user.displayName || 'user'}>
            <img src={user?.photoURL || '/user.jpg'} className="w-[50px] h-[50px] rounded-full" alt="" /> 
            </div>
              <button onClick={handleSignOut} className="btn btn-accent">Log Out </button>
           </div> : 
-       
            <Link to={'/login'} className="btn btn-accent">Login</Link>
      
         }
+      
        
       </div>
     </div>
